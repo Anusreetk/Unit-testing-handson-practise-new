@@ -1,7 +1,9 @@
 import { html, fixture, expect } from '@open-wc/testing';
-
-import '../loan-application.js';
+import  '../loan-application.js';
 
 describe('LoanApplication', () => {
-  // Write test cases inside this block
+  it("is accessible",async()=>{
+    const el = await fixture(html `<dash-board> </dash-board>`);
+    await expect(el).to.be.accessible();
+  });
 });
